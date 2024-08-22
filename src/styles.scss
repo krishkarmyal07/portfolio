@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+.sidebar {
+    background-color: #000;
+    border-right: 1px solid transparent;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    position: fixed;
+    top: 0px;
+    transition: all 0.2s ease-in-out 0s;
+    width: 230px;
+    z-index: 1001;
+}
+.sidebar.opened {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+.sidebar-menu li a:hover {
+	color: #fff;
+}
+.sidebar-menu li.active a {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.sidebar-menu ul ul a.active {
+	color: #00c5fb;
+	text-decoration: underline;
+}
+.sidebar-menu .menu-arrow {
+	-webkit-transition: -webkit-transform 0.15s;
+	-o-transition: -o-transform 0.15s;
+	transition: transform .15s;
+	position: absolute;
+	right: 15px;
+	display: inline-block;
+	font-family: 'FontAwesome';
+	text-rendering: auto;
+	line-height: 40px;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+	line-height: 18px;
+	top: 11px;
+}
+.sidebar-menu .menu-arrow:before {
+  content: "\f105";
+}
+.sidebar-menu ul ul a .menu-arrow {
+	top: 6px;
+}
+
+
+
+.mini-sidebar {
+    width: 60px;
+}
+.mini-sidebar.expand-menu .sidebar {
+    width: 230px;
+}
