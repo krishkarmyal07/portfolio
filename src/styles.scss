@@ -1,11 +1,47 @@
+/*============================
+
+1. General
+2. Sidebar
+3. Titlebar
+
+========================================*/
+
+/*-----------------
+	1. General
+-----------------------*/
+
+@font-face {
+	font-family: 'Droid Sans Mono';
+	src: url('https://fonts.googleapis.com/css2?family=Droid+Sans+Mono');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
+html {
+	height: 100%;
+}
+body {
+	font-family: 'Segoe WPC', 'Segoe UI', sans-serif;
+	font-size: .9375rem;
+	color: #1f1f1f;
+	background-color: #1f1f1f;
+	min-height: 100%;
+	overflow-x: hidden;
+
+}
+
+/*-----------------
+	2. Sidebar
+-----------------------*/
 .sidebar {
     background-color: #000;
-    border-right: 1px solid transparent;
+    border-right: 0.5px solid #2b2b2b;
     bottom: 0;
     left: 0;
     margin-top: 0;
     position: fixed;
-    top: 0px;
+    top: 30px;
     transition: all 0.2s ease-in-out 0s;
     width: 230px;
     z-index: 1001;
@@ -61,3 +97,96 @@
 .mini-sidebar.expand-menu .sidebar {
     width: 230px;
 }
+.mini-sidebar.expand-menu {
+    width: 230px;
+}
+.sidebar-left{
+    width: 60px;
+    // top: 0;
+    // bottom: 0;
+    position:fixed;
+    border-right: 1px solid #2b2b2b;
+}
+.sidebar-right{
+    width: 170px;
+    margin-left: 60px;
+    // top: 0;
+    // bottom: 0;
+    position:fixed;
+    border-right: 1px solid #2b2b2b;
+}
+.hide-sidebar{
+    display: none;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+
+.sidebar-overlay {
+	display: none;
+	position: fixed;
+	z-index: 90;
+	height: 100%;
+	left: 0;
+	top: 60px;
+	width: 100%;
+	z-index: 1040;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.sidebar-overlay.opened {
+	display: block;
+}
+/*-----------------
+3. Titlebar
+------------------------*/
+
+
+.titlebar {
+    position: fixed;
+    top: 0;
+	left: 0;
+    height: 30px;
+    border-bottom: 0.5px solid #2b2b2b;
+	width: 100%;
+	display: flex;
+}
+
+.titlebar-left {
+    width: 30%;
+}
+.titlebar-right {
+    width: 30%;
+}
+.titlebar-center {
+    width: 40%;
+}
+/*-----------------
+4. Content
+------------------------*/
+
+.page-wrapper {
+	left: 0;
+	margin-left: 230px;
+	padding-top: 60px;
+	position: relative;
+	transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 991px) {
+    .sidebar-open .page-wrapper{
+        margin-left: 60px;
+    }
+    
+}
+
+
+@media screen and (max-width: 767px) {
+    .page-wrapper  {
+    margin-left: 0px ;
+}
+
+@media only screen and (max-width: 767.98px) {
+    body {
+        font-size: 0.875rem;
+    }
+}
+  }
