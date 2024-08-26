@@ -5,11 +5,11 @@ import { MainModule } from './main/main.module';
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "main",
+    redirectTo: "about",
     pathMatch: "full",
   },
   {
-    path:'main',
+    path:'',
     loadChildren: () => import(`./main/main.module`).then((m)=>m.MainModule)
   }
 ];
