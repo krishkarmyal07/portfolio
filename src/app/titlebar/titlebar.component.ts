@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class TitlebarComponent {
 
+  list = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", "Help"]
 }

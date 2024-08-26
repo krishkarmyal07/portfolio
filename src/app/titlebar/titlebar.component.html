@@ -1,5 +1,10 @@
 <div class="titlebar">
-    <div class="titlebar-left" style="background-color: aliceblue;"></div>
-    <div class="titlebar-center" style="background-color: aqua;"></div>
-    <div class="titlebar-right" style="background-color: blue;"></div> 
+    <div class="titlebar-left" >
+        <img src="assets/images/icons8-visual-studio-code-2019-48.png" alt="vs code logo">
+        <div class="titlebar-options">
+            <span *ngFor="let item of list">{{item}}</span>
+        </div>
+    </div>
+    <div class="titlebar-center" ></div>
+    <div class="titlebar-right" ></div> 
 </div>
