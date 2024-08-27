@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 export class TitlebarComponent {
 
   list = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", "Help"]
+
+  toggleMenu(){
+    if (document.getElementById('sidebar')?.classList.contains('mini-sidebar')) {
+      document.getElementById('sidebar')?.classList.remove('mini-sidebar');
+      document.querySelector('body')?.classList.remove('sidebar-open')
+    }
+    else {
+      document.getElementById('sidebar')?.classList.add('mini-sidebar');
+      document.querySelector('body')?.classList.add('sidebar-open')
+    }
+  }
 }
