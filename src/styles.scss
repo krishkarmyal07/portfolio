@@ -57,48 +57,6 @@ body {
 	transition: all 0.4s ease;
 }
 
-.sidebar-menu li a:hover {
-	color: #fff;
-}
-
-.sidebar-menu li.active a {
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.2);
-}
-
-.sidebar-menu ul ul a.active {
-	color: #00c5fb;
-	text-decoration: underline;
-}
-
-.sidebar-menu .menu-arrow {
-	-webkit-transition: -webkit-transform 0.15s;
-	-o-transition: -o-transform 0.15s;
-	transition: transform .15s;
-	position: absolute;
-	right: 15px;
-	display: inline-block;
-	font-family: 'FontAwesome';
-	text-rendering: auto;
-	line-height: 40px;
-	font-size: 18px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-transform: translate(0, 0);
-	-ms-transform: translate(0, 0);
-	-o-transform: translate(0, 0);
-	transform: translate(0, 0);
-	line-height: 18px;
-	top: 11px;
-}
-
-.sidebar-menu .menu-arrow:before {
-	content: "\f105";
-}
-
-.sidebar-menu ul ul a .menu-arrow {
-	top: 6px;
-}
 
 
 .sidebar-menu span {
@@ -110,7 +68,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
 }
 
 svg:hover {
@@ -300,9 +258,18 @@ svg:hover {
 }
 
 .bread-crumbs {
-	font-size: smaller;
+	font-size: small;
 	background-color: #1f1f1f;
+	padding-left: 20px;
+    display: flex;
+	flex-direction: row;
+	align-items: center;
 }
+
+.bread-crumbs span{
+	padding: 0 5px;
+}
+
 
 /*-----------------
 5. Main
