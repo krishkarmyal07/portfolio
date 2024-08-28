@@ -8,6 +8,12 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { TitlebarComponent } from '../titlebar/titlebar.component';
 import { TitleTabsComponent } from '../title-tabs/title-tabs.component';
 import { AboutComponent } from './about/about.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { ProjectComponent } from './project/project.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
+import { DefaultComponent } from './default/default.component';
+import { ReadmeComponent } from './readme/readme.component';
 
 
 @NgModule({
@@ -17,7 +23,13 @@ import { AboutComponent } from './about/about.component';
     SidebarComponent,
     TitlebarComponent,
     TitleTabsComponent,
-    AboutComponent
+    AboutComponent,
+    WelcomeComponent,
+    ProjectComponent,
+    ExperienceComponent,
+    ContactComponent,
+    DefaultComponent,
+    ReadmeComponent
   ],
   imports: [
     CommonModule,
