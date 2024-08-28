@@ -5,7 +5,7 @@ import { MainModule } from './main/main.module';
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "about",
+    redirectTo: "welcome",
     pathMatch: "full",
   },
   {
