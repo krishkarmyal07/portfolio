@@ -1,0 +1,207 @@
+// .welcome-page .main-wrapper {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     width: 100%;
+// }
+.welcome-box {
+    margin: 0 auto;
+    // max-width: 480px;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+.social-box {
+    margin: 0 auto;
+    // max-width: 480px;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.welcome-box h1 {
+    color: #ff9b44;
+    font-size: 10em;
+}
+
+.btn-custom {
+    background: #ff9b44;
+    background: linear-gradient(to right, #ff9b44 0%, #fc6075 100%);
+    color: #fff;
+}
+
+.welcome-box .btn {
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    min-width: 200px;
+    padding: 10px 20px;
+}
+.welcome-box h1 {
+    color: #ff9b44;
+    font-size: 5em;
+}
+.welcome-box .btn {
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    min-width: 200px;
+    padding: 10px 20px;
+}
+.welcome-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.face{
+    position: relative;
+    // width: 300px;
+    // height: 300px;
+    // border-radius: 50%;
+    background: #ffcd00;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+// .face::before{
+//     content: '';
+//     position: absolute;
+//     top: 180px;
+//     width: 150px;
+//     height: 70px;
+//     background: #b57700;
+//     border-bottom-left-radius: 70px;
+//     border-bottom-right-radius: 70px;
+//     transition: 0.5s
+// }
+// .face:hover::before{
+//     top: 210px;
+//     width: 150px;
+//     height: 20px;
+//     background: #b57700;
+//     border-bottom-left-radius: 0px;
+//     border-bottom-right-radius: 0px;
+// }
+.eyes{
+    position: relative;
+    top: -40px;
+    display: flex
+}
+.eyes .eye{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    background: #fff;
+    margin: 0 15px;
+    border-radius: 50%
+}
+.eyes .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%
+}
+
+
+
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  $social-button-size: 64px;
+  $social-button-icon-size: 0.4;
+  $social-button-background: #fff;
+  $social-button-active-color: #fff;
+  $social-button-transition-time: 0.3s;
+  
+  $social-button-colors: (
+    'mail': #0072c6,
+    'facebook': #3b5999,
+    'linkedin': #0077b5,
+    'github': #6e5494,
+    'codepen': #212121,
+    'steam': #7da10e,
+    'snapchat': #eec900,
+    'twitter': #55acee,
+    'instagram': #e4405f,
+    'npmjs': #c12127,
+  );
+  
+  .social-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: $social-button-size;
+    height: $social-button-size;
+    text-decoration: none;
+    border-radius: 100%;
+    background: $social-button-background;
+    text-align: center;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 100%;
+      transition: $social-button-transition-time;
+    }
+  
+    &:focus,
+    &:hover {
+      color: $social-button-active-color;
+  
+      &::after {
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        margin-left: calc(-50% - 1px);
+      }
+    }
+  
+    i,
+    svg {
+      position: relative;
+      z-index: 1;
+      transition: $social-button-transition-time;
+    }
+  
+    i {
+      font-size: $social-button-size * $social-button-icon-size;
+    }
+  
+    svg {
+      height: percentage($social-button-icon-size);
+      width: percentage($social-button-icon-size);
+    }
+  
+    @each $name, $color in $social-button-colors {
+      &--#{$name} {
+        color: $color;
+  
+        &::after {
+          background: $color;
+        }
+      }
+    }
+  }
+  
+  
