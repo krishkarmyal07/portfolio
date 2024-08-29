@@ -14,6 +14,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { DefaultComponent } from './default/default.component';
 import { ReadmeComponent } from './readme/readme.component';
+import { FooterComponent } from '../footer/footer.component';
 
 
 @NgModule({
@@ -21,12 +22,13 @@ import { ReadmeComponent } from './readme/readme.component';
     MainComponent,
     HomeComponent,
     SidebarComponent,
+    FooterComponent,
     TitlebarComponent,
     TitleTabsComponent,
     AboutComponent,
     WelcomeComponent,
     ProjectComponent,
-    ExperienceComponent,
+    ExperienceComponent, 
     ContactComponent,
     DefaultComponent,
     ReadmeComponent
