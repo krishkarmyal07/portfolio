@@ -1,0 +1,95 @@
+h3 {
+    font-family: system-ui, sans-serif;
+    font-size: 4rem;
+    margin:0 auto;
+    cursor: pointer;
+    padding: 0 .1em;
+  }
+  .hover-4{
+    color:black;
+    background: 
+      linear-gradient(90deg,red 50%,white 50%) 
+      var(--_p,100%)/200%,
+      linear-gradient(90deg,white 50%,red 50%) 
+      var(--_c,0%)/200%
+      no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .4s;
+  }
+  .hover-4:hover{
+     --_p: 50%;
+  --_c: 50%;
+    color:#0000;
+  }
+
+  .about-header{
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+
+  
+  /* styles.css */
+
+// body {
+//     font-family: 'Courier New', Courier, monospace;
+//     background-color: #1e1e1e; /* Dark background similar to VS Code */
+//     color: #dcdcdc; /* Light gray text color */
+//     margin: 0;
+//     padding: 0;
+// }
+
+.about-me {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #2d2d2d; /* Slightly lighter background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.greeting {
+    font-size: 1.5rem;
+    color: #9cdcfe; /* VS Code blue */
+}
+
+.intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #ce9178; /* VS Code orange */
+}
+
+.tech-stack, .current-focus, .hobbies, .connect {
+    margin-top: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #569cd6; /* VS Code blue */
+    border-bottom: 2px solid #569cd6;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.link {
+    color: #9cdcfe; /* VS Code blue */
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
