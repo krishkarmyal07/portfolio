@@ -7,12 +7,17 @@ import { NavigationEnd, Router, Event } from '@angular/router';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  url: string = ''
+  showTabs: boolean = true
   constructor(public router: Router){
  
     this.router.events.subscribe((event: Event) => {
       if(event instanceof NavigationEnd){
-        this.url = event.url
+        if(event.url === '/default'){
+          this.showTabs = false
+        }
+        else{
+          this.showTabs = true
+        }
       }
     })
   }

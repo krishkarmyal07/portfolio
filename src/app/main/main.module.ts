@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DefaultComponent } from './default/default.component';
 import { ReadmeComponent } from './readme/readme.component';
 import { FooterComponent } from '../footer/footer.component';
+import { SettingComponent } from './setting/setting.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FooterComponent } from '../footer/footer.component';
     ExperienceComponent, 
     ContactComponent,
     DefaultComponent,
-    ReadmeComponent
+    ReadmeComponent,
+    SettingComponent
   ],
   imports: [
     CommonModule,

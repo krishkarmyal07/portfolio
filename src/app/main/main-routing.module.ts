@@ -9,6 +9,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { DefaultComponent } from './default/default.component';
 import { ReadmeComponent } from './readme/readme.component';
+import { SettingComponent } from './setting/setting.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
       {
         path:"readme",
         component:ReadmeComponent
+      },
+      {
+        path:"settings",
+        component:SettingComponent
       },
     ]
   }
