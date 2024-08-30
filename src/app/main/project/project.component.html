@@ -1,1 +1,10 @@
-<p>project works!</p>
+<section class="projects">
+    <h1 class="projects-title">📁 Projects</h1>
+    <div class="projects-grid">
+      <div *ngFor="let project of projects" class="project-card">
+        <h2 class="project-title">{{ project.title }}</h2>
+        <p class="project-description">{{ project.description }}</p>
+        <!-- <a [href]="project.link" class="project-link" target="_blank">View Project</a> -->
+      </div>
+    </div>
+  </section>

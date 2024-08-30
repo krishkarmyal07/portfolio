@@ -4,6 +4,33 @@
 //     justify-content: center;
 //     width: 100%;
 // }
+
+.name {
+    animation: fadeInUp 1s ease-out, slideInFromLeft 1s ease-out;
+  }
+
+   @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
 .welcome-box {
     margin: 0 auto;
     // max-width: 480px;
@@ -19,9 +46,22 @@
     width: 100%;
 }
 
-.welcome-box h1 {
-    color: #ff9b44;
-    font-size: 10em;
+// .explorer-info {
+//   display: none;
+// }
+// .welcome-box h1 {
+//     color: #ff9b44;
+//     font-size: 10em;
+// }
+
+h4 {
+    // font-size: 2rem;
+    font-weight: 300;
+    color: #9cdcfe; 
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 .btn-custom {
@@ -38,7 +78,7 @@
     padding: 10px 20px;
 }
 .welcome-box h1 {
-    color: #ff9b44;
+    color: #ff9b44;;
     font-size: 5em;
 }
 .welcome-box .btn {
@@ -54,6 +94,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 

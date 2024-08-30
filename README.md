@@ -1,27 +1,18 @@
-# Portfolio
+# Portfolio Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+This is a personal portfolio project built using Angular 16. The project is designed with a Visual Studio Code theme, providing a familiar and intuitive interface for developers. It is fully responsive, ensuring optimal viewing across all devices, and compatible with all major browsers.
 
-## Development server
+## Table of Contents
+- [Demo](#demo)
+- [Features](#features)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Demo
+You can view the live demo of this portfolio [here](https://krishkarmyal07.github.io/portfolio/).
 
-## Code scaffolding
+## Features
+- **Fully Responsive:** The layout adapts seamlessly to various screen sizes, ensuring a consistent user experience on mobile, tablet, and desktop devices.
+- **VS Code Theme:** The UI design mimics the Visual Studio Code environment, offering a familiar interface for developers.
+- **Component-Based Architecture:** Angular components are utilized for each section, promoting code modularity and reusability.
+- **Lightweight:** By avoiding external libraries, the application remains lightweight and efficient.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

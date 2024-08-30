@@ -27,3 +27,44 @@
     color: white;
     padding-top: 5px;
 }
+
+.bread-crumbs span{
+    cursor: default;
+  }
+
+
+//   .bread-crumbs{
+//     background-image: linear-gradient(
+//       to right,
+//       #54b3d6,
+//       #54b3d6 50%,
+//       white 50%
+//     );
+//     background-size: 200% 100%;
+//     background-position: -100%;
+//     position: relative;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     transition: all 0.3s ease-in-out;
+//   }
+  
+  .bread-crumbs:before{
+    content: '';
+    background: #0078d4;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .bread-crumbs:hover {
+   background-position: 0;
+  }
+  
+  .bread-crumbs:hover::before{
+    width: 100%;
+  }
+  

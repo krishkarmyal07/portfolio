@@ -1,0 +1,35 @@
+/* experience.component.css */
+
+.experience {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: #252526;
+    border-left: 5px solid #007acc; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .experience-title {
+    font-size: 2rem;
+    color: #d7ba7d; 
+    margin-bottom: 1rem;
+  }
+  
+  .experience-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .role {
+    font-size: 1.5rem;
+    color: #9cdcfe; 
+  }
+  
+  .company, .duration, .description {
+    margin: 0.5rem 0;
+  }
+  
+  .company strong, .duration strong {
+    color: #d7ba7d; 
+  }
+  
