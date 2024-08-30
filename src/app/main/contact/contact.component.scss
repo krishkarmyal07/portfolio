@@ -27,10 +27,13 @@
     margin: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
+    // filter: blur(0.5px);
+    // -webkit-filter: blur(0.5px);
   }
   
   .contact-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    transform: scale(1.05); 
+    // filter: blur(0);
   }
   
   .contact-icon {
@@ -39,14 +42,10 @@
     margin-bottom: 1rem;
     transition: transform 0.3s ease-in-out;
   }
-  
-  .contact-icon:hover {
-    transform: rotate(360deg); /* Rotate icon on hover */
-  }
-  
+
   .contact-link {
     margin-bottom: 1rem;
-    color: #dcdcdc; /* Light gray */
+    color: #dcdcdc; 
     font-size: 0.9rem;
     word-wrap: break-word;
   }
@@ -63,7 +62,7 @@
   }
   
   .contact-button:hover {
-    background-color: var(--hover-color);
+    background-color: #0d6efd;
     color: white;
     transform: translateY(-3px); /* Lift the button on hover */
   }
