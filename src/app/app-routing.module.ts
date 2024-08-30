@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainModule } from './main/main.module';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {
@@ -11,11 +12,16 @@ const routes: Routes = [
   {
     path:'',
     loadChildren: () => import(`./main/main.module`).then((m)=>m.MainModule)
-  }
+  },
+  {
+    path: 'error',
+    component: ErrorComponent
+  },
+  { path: '**', redirectTo: '/error'},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
