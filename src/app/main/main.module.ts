@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
-import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { TitlebarComponent } from '../titlebar/titlebar.component';
 import { TitleTabsComponent } from '../title-tabs/title-tabs.component';
@@ -21,7 +20,6 @@ import { SettingComponent } from './setting/setting.component';
 @NgModule({
   declarations: [
     MainComponent,
-    HomeComponent,
     SidebarComponent,
     FooterComponent,
     TitlebarComponent,
