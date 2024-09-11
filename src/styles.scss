@@ -5,6 +5,7 @@
 3. Titlebar
 4. Title Tabs
 5. Main
+6. Responsive
 ========================================*/
 
 /*-----------------
@@ -33,6 +34,10 @@ body {
 
 }
 
+a {
+
+	text-decoration: none;
+}
 /*-----------------
 	2. Sidebar
 -----------------------*/
@@ -321,7 +326,7 @@ svg:hover {
 
 
 /*-----------------
-. Responsive
+6. Responsive
 ------------------------*/
 
 @media only screen and (min-width: 991px) {
