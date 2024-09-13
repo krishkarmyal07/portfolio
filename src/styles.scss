@@ -109,8 +109,11 @@ svg:hover {
 	width: 45px;
 	// top: 0;
 	// bottom: 0;
-	position: fixed;
+	// position: fixed;
 	border-right: 1px solid #2b2b2b;
+
+	height: 100%;
+    position: fixed;
 }
 
 .sidebar-left span {
@@ -154,6 +157,7 @@ svg:hover {
 .sidebar-left-container {
     display: flex;
     flex-direction: column;
+	height: 100%;
 }
 
 .menu-top {
@@ -162,7 +166,7 @@ svg:hover {
 }
 
 .menu-top {
-    min-height: 60vh;
+    // min-height: 60vh;
 }
 
 /*-----------------
@@ -373,7 +377,11 @@ svg:hover {
 	}
 	.menu-top{
 		gap: 0;
-		overflow-x: scroll;
+		// overflow-x: scroll;
+	}
+
+	.menu-bottom {
+		position: fixed;
 	}
 
 }
