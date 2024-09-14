@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, Event, NavigationEnd } from '@angular/router';
 import { TabsService } from '../title-tabs/tabs.service';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -8,7 +8,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent {
+export class SidebarComponent implements AfterViewInit{
   route: string = '';
   folders: any[] = [
     { name: 'portfolio', files: [
@@ -36,7 +36,6 @@ export class SidebarComponent {
   onMouseLeave(event: MouseEvent) {
     const sidebar = event.target as HTMLElement;
     sidebar.classList.remove('expand-menu');
-    console.log(sidebar.classList.contains('mini-sidebar'))
     if (sidebar.classList.contains('mini-sidebar')) {
       document.getElementById('sidebar-right')?.classList.add('hide-sidebar');
     }
@@ -45,7 +44,6 @@ export class SidebarComponent {
         setTimeout(() => {
           this.route = router.url
         }, 0);
-        console.log(this.route)
         this.router.events.subscribe((event: Event) => {
           if(event instanceof NavigationEnd){
             this.route = event.url
@@ -54,6 +52,12 @@ export class SidebarComponent {
 
      }
   
+ngAfterViewInit(): void {
+  if(window.innerWidth <= 768){
+    document.getElementById('sidebar-overlay')?.classList.add('opened')
+  }
+}
+
 
   closeSidebar() {
     if (document.getElementById('sidebar')?.classList.contains('mini-sidebar')) {
@@ -76,18 +80,25 @@ export class SidebarComponent {
     }
     else if(this.route === url && document.getElementById('sidebar')?.classList.contains('mini-sidebar')){
       document.getElementById('sidebar')?.classList.remove('mini-sidebar');
-      document.querySelector('body')?.classList.remove('sidebar-open')
+      document.querySelector('body')?.classList.remove('sidebar-open');
+      if(window.innerWidth <= 768){
+        document.getElementById('sidebar-overlay')?.classList.add('opened')
+        document.body.style.overflow = 'hidden'
+      }
+      
+
     }
     else{
       document.getElementById('sidebar')?.classList.add('mini-sidebar');
       document.querySelector('body')?.classList.add('sidebar-open')
+      document.getElementById('sidebar-overlay')?.classList.remove('opened')
+      document.body.style.overflow = 'auto'
     }
   
   }
 
   addTabs(name: string, url: string){
     this.service.addTab({name: name, id: name})
-    console.log(this.service.getTabs())
   }
 
   toggleDropdown(folder: any): void {
