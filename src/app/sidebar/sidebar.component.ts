@@ -105,4 +105,23 @@ ngAfterViewInit(): void {
     folder.expanded = !folder.expanded;
   }
 
+  openSidebar(){
+    if(document.getElementById('sidebar')?.classList.contains('mini-sidebar')){
+      document.getElementById('sidebar')?.classList.remove('mini-sidebar');
+      document.querySelector('body')?.classList.remove('sidebar-open');
+      if(window.innerWidth <= 768){
+        document.getElementById('sidebar-overlay')?.classList.add('opened')
+        document.body.style.overflow = 'hidden'
+      }
+      
+
+    }
+    else{
+      document.getElementById('sidebar')?.classList.add('mini-sidebar');
+      document.querySelector('body')?.classList.add('sidebar-open')
+      document.getElementById('sidebar-overlay')?.classList.remove('opened')
+      document.body.style.overflow = 'auto'
+    }
+  
+  }
 }
