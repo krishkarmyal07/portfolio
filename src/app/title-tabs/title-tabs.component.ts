@@ -50,9 +50,11 @@ export class TitleTabsComponent {
   // deletes element from an array 
   delete(val: string){
     this.service.removeTab(val)
-
+    let prevUrl = ''
     if(this.tabs.length > 0){              // checks array length and routes to previous page 
-      history.back()
+      // history.back()
+     prevUrl = this.tabs[this.tabs.length - 1].id
+     this.router.navigateByUrl(`/${prevUrl}`)    
     }
     else{
       this.router.navigateByUrl('/default')        // regirects user to default if array length is 0
