@@ -124,9 +124,9 @@ svg:hover {
 .sidebar-right {
 	width: 170px;
 	margin-left: 45px;
-	// top: 0;
-	// bottom: 0;
-	// position:fixed;
+	top: 0;
+	bottom: 0;
+	position:absolute;
 	border-right: 1px solid #2b2b2b;
 }
 
@@ -134,12 +134,11 @@ svg:hover {
 .sidebar-overlay {
 	display: none;
 	position: fixed;
-	z-index: 90;
 	height: 100%;
 	left: 0;
-	top: 45px;
+	// top: 45px;
 	width: 100%;
-	z-index: 1040;
+	z-index: 999;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -148,7 +147,7 @@ svg:hover {
 }
 
 .menu-bottom {
-    // position: fixed;
+    position: fixed;
     bottom: 0;
     margin-bottom: 25px;
     background-color: #181818;
